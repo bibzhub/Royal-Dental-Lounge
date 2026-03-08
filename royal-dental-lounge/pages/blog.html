@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dental Blog – Royal Dental Lounge | Oral Health Tips Kerala</title>
+    <meta name="description"
+        content="Read the latest oral health tips, dental news, and treatment guides from Dr. Litty Rathnakumar at Royal Dental Lounge." />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>🦷</text></svg>" />
+    <style>
+        .blog-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .blog-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .blog-category {
+            color: var(--gold-dark);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .blog-title {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .blog-title a:hover {
+            color: var(--teal);
+        }
+
+        .blog-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--navy);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .read-more::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .read-more:hover {
+            color: var(--teal);
+        }
+
+        .read-more:hover::after {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hours-strip">
+        🕒 Open Daily: <strong>8:30 AM – 8:30 PM</strong> &nbsp;|&nbsp; 📍 MLG Square, NH66, Kerala
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav scrolled" role="navigation" aria-label="Main Navigation">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <div class="nav-logo-icon">🦷</div>
+                <div class="nav-logo-text">
+                    <span class="nav-logo-name" style="color:var(--navy);">Royal Dental Lounge</span>
+                    <span class="nav-logo-sub" style="color:var(--gold-dark);">Excellence in Modern Dentistry</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="technology.html">Technology</a>
+                <a href="blog.html" style="color:var(--gold-dark);">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://wa.me/91XXXXXXXXXX" class="btn-nav-wa" target="_blank" rel="noopener">📱 WhatsApp</a>
+                <a href="contact.html#appointment" class="btn-nav-book">📅 Book Now</a>
+            </div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-close-btn">✕</button>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="technology.html">Technology</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html#appointment" class="mobile-btn">📅 Book Appointment</a>
+    </div>
+
+    <!-- Inner Page Hero -->
+    <div class="page-hero">
+        <div class="page-hero-content">
+            <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> Blog</div>
+            <h1>Oral Health Journal</h1>
+            <p>Insights, tips, and the latest in dental science from Dr. Litty Rathnakumar and our expert team.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:2.5rem;">
+
+                <!-- Post 1 -->
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-img">⚡</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Technology</span>
+                            <span>May 15, 2025</span>
+                        </div>
+                        <h2 class="blog-title"><a href="#">Why Laser Dentistry is the Future of Painless Care</a></h2>
+                        <p class="blog-excerpt">Fear the drill? Discover how dental lasers are revolutionizing
+                            treatments, making procedures virtually pain-free and drastically reducing healing times...
+                        </p>
+                        <a href="#" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-img">🔩</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Restoration</span>
+                            <span>Apr 28, 2025</span>
+                        </div>
+                        <h2 class="blog-title"><a href="#">Dental Implants vs. Dentures: Which is Right for You?</a>
+                        </h2>
+                        <p class="blog-excerpt">Missing a tooth? We break down the absolute pros and cons of modern
+                            dental implants versus traditional dentures to help you make an informed choice...</p>
+                        <a href="#" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-img">🧸</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Pediatric</span>
+                            <span>Apr 10, 2025</span>
+                        </div>
+                        <h2 class="blog-title"><a href="#">5 Tips to Prepare Your Child for Their First Dental Visit</a>
+                        </h2>
+                        <p class="blog-excerpt">Many adults carry dental anxiety from childhood. Learn how to architect
+                            a positive, stress-free first dental room experience for your little ones...</p>
+                        <a href="#" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-logo">
+                    <div class="footer-brand-logo-icon">🦷</div>
+                    <h3>Royal Dental Lounge</h3>
+                </div>
+                <p>Excellence in Modern Dentistry. MLG Square, NH66, Kerala.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">📍 MLG Square, NH66</a></li>
+                    <li><a href="tel:+91XXXXXXXXXX">📞 +91 XXXXXXXXXX</a></li>
+                    <li><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">📱 WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2025 <span class="gold">Royal Dental Lounge</span>. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

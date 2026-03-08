@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Dental Technology – Royal Dental Lounge | Kerala</title>
+    <meta name="description"
+        content="Explore the world-class dental technology and strict sterilization protocols used at Royal Dental Lounge, MLG Square, ensuring safe and painless treatments." />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>🦷</text></svg>" />
+    <style>
+        .tech-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border);
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--gold-light);
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tech-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .tech-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .sterilization-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--navy);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hours-strip">
+        🕒 Open Daily: <strong>8:30 AM – 8:30 PM</strong> &nbsp;|&nbsp; 📍 MLG Square, NH66, Kerala
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav scrolled" role="navigation" aria-label="Main Navigation">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <div class="nav-logo-icon">🦷</div>
+                <div class="nav-logo-text">
+                    <span class="nav-logo-name" style="color:var(--navy);">Royal Dental Lounge</span>
+                    <span class="nav-logo-sub" style="color:var(--gold-dark);">Excellence in Modern Dentistry</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="technology.html" style="color:var(--gold-dark);">Technology</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://wa.me/91XXXXXXXXXX" class="btn-nav-wa" target="_blank" rel="noopener">📱 WhatsApp</a>
+                <a href="contact.html#appointment" class="btn-nav-book">📅 Book Now</a>
+            </div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-close-btn">✕</button>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="technology.html">Technology</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html#appointment" class="mobile-btn">📅 Book Appointment</a>
+    </div>
+
+    <!-- Inner Page Hero -->
+    <div class="page-hero"
+        style="background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.95)), url('../images/laser.png') center/cover;">
+        <div class="page-hero-content">
+            <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> Technology</div>
+            <h1>Technology & Sterilization</h1>
+            <p>We invest in the world's best dental technology to ensure your treatments are safer, faster, and
+                remarkably comfortable.</p>
+        </div>
+    </div>
+
+    <!-- Technology Grid -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem;" class="animate-on-scroll">
+                <div class="section-label" style="justify-content:center;">Modern Infrastructure</div>
+                <h2 class="section-title">Precision Instruments</h2>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;">
+                <!-- Tech 1 -->
+                <div class="tech-card animate-on-scroll">
+                    <div class="tech-icon">⚡</div>
+                    <h3 class="tech-title">Soft Tissue Dental Laser</h3>
+                    <p class="tech-desc">Our diode laser system vaporizes infected tissue without drills or scalpels. It
+                        ensures bloodless gum surgeries, instant ulcer relief, and accelerates the healing process
+                        exponentially.</p>
+                </div>
+                <!-- Tech 2 -->
+                <div class="tech-card animate-on-scroll">
+                    <div class="tech-icon">📉</div>
+                    <h3 class="tech-title">Digital RVG Radiography</h3>
+                    <p class="tech-desc">Advanced digital X-ray sensors that provide high-resolution, instant imaging
+                        while exposing patients to 90% less radiation than traditional film X-rays. Safe for children
+                        and adults.</p>
+                </div>
+                <!-- Tech 3 -->
+                <div class="tech-card animate-on-scroll">
+                    <div class="tech-icon">🔄</div>
+                    <h3 class="tech-title">Rotary Endodontics</h3>
+                    <p class="tech-desc">Using flexible nickel-titanium motorized files, we clean and shape root canals
+                        with microscopic precision. This turns a terrifying multi-visit Root Canal into a comfortable
+                        single-sitting procedure.</p>
+                </div>
+                <!-- Tech 4 -->
+                <div class="tech-card animate-on-scroll">
+                    <div class="tech-icon">💺</div>
+                    <h3 class="tech-title">Ergonomic Dental Chairs</h3>
+                    <p class="tech-desc">Imported, fully automated plush dental chairs designed for optimal lumbar
+                        support. Engineered with anti-retraction valves to prevent any cross-contamination in water
+                        lines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sterilization Protocol -->
+    <section class="section section-alt">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start;">
+                <div class="animate-on-scroll">
+                    <img src="../images/sterilization.png" onerror="this.src='../images/reception.png'"
+                        alt="Autoclave Sterilization"
+                        style="border-radius:var(--radius-xl); box-shadow:var(--shadow-hero); width:100%; position:sticky; top:100px;"
+                        loading="lazy">
+                </div>
+                <div class="animate-on-scroll">
+                    <div class="section-label">100% Infection Control</div>
+                    <h2 class="section-title">Our Strict 4-Step <br>Sterilization Protocol.</h2>
+                    <p class="section-subtitle" style="max-width:100%; margin-bottom:2rem;">Your safety is never
+                        compromised. We adhere strictly to CDC and WHO guidelines for dental infection control.</p>
+
+                    <div class="sterilization-step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h4
+                                style="font-family:var(--font-serif); font-size:1.2rem; color:var(--navy); margin-bottom:0.5rem;">
+                                Ultrasonic Cleansing</h4>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.6;">All instruments
+                                are first immersed in an ultrasonic cleaner with potent hospital-grade enzymatic
+                                solution to break down microscopic debris.</p>
+                        </div>
+                    </div>
+
+                    <div class="sterilization-step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h4
+                                style="font-family:var(--font-serif); font-size:1.2rem; color:var(--navy); margin-bottom:0.5rem;">
+                                Pouching & Sealing</h4>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.6;">Dried instruments
+                                are sealed individually in sterile indicator pouches to guarantee they remain sterile
+                                until opened right in front of you.</p>
+                        </div>
+                    </div>
+
+                    <div class="sterilization-step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h4
+                                style="font-family:var(--font-serif); font-size:1.2rem; color:var(--navy); margin-bottom:0.5rem;">
+                                Class-B Autoclave</h4>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.6;">The gold standard
+                                in sterilization. Pouches undergo high-pressure steam sterilization under a vacuum to
+                                kill 100% of bacteria, viruses, and spores.</p>
+                        </div>
+                    </div>
+
+                    <div class="sterilization-step">
+                        <div class="step-number">4</div>
+                        <div>
+                            <h4
+                                style="font-family:var(--font-serif); font-size:1.2rem; color:var(--navy); margin-bottom:0.5rem;">
+                                UV Chamber Storage</h4>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.6;">Sterilized
+                                pouches are stored in specialized Ultraviolet (UV) light chambers to maintain pristine
+                                sterility until the moment of your treatment.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-logo">
+                    <div class="footer-brand-logo-icon">🦷</div>
+                    <h3>Royal Dental Lounge</h3>
+                </div>
+                <p>Excellence in Modern Dentistry. MLG Square, NH66, Kerala.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">📍 MLG Square, NH66</a></li>
+                    <li><a href="tel:+91XXXXXXXXXX">📞 +91 XXXXXXXXXX</a></li>
+                    <li><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">📱 WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2025 <span class="gold">Royal Dental Lounge</span>. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

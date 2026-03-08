@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dental Services – Royal Dental Lounge | Advanced Treatments Kerala</title>
+    <meta name="description"
+        content="Comprehensive dental services at Royal Dental Lounge: laser dentistry, implants, root canal, cosmetic dentistry, teeth whitening, pediatric dentistry, gum treatment and more in Kerala." />
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>🦷</text></svg>" />
+    <style>
+        .service-detail-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+
+        .service-detail-card:hover {
+            box-shadow: 0 16px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-detail-card.reverse {
+            direction: rtl;
+        }
+
+        .service-detail-card.reverse>* {
+            direction: ltr;
+        }
+
+        .service-detail-img {
+            background: linear-gradient(135deg, var(--navy), var(--teal-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            min-height: 280px;
+        }
+
+        .service-detail-body {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .service-detail-tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .service-detail-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+
+        .service-detail-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+        }
+
+        .service-detail-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .benefit-item::before {
+            content: '✓';
+            color: var(--teal);
+            font-weight: 700;
+        }
+
+        @media (max-width:768px) {
+            .service-detail-card {
+                grid-template-columns: 1fr;
+            }
+
+            .service-detail-card.reverse {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hours-strip">
+        🕒 Open Daily: <strong>8:30 AM – 8:30 PM</strong> &nbsp;|&nbsp; 📍 MLG Square, NH66, Kerala
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav scrolled" role="navigation" aria-label="Main Navigation">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <div class="nav-logo-icon">🦷</div>
+                <div class="nav-logo-text">
+                    <span class="nav-logo-name" style="color:var(--navy);">Royal Dental Lounge</span>
+                    <span class="nav-logo-sub" style="color:var(--gold-dark);">Excellence in Modern Dentistry</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html" style="color:var(--gold-dark);">Services</a>
+                <a href="technology.html">Technology</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="https://wa.me/91XXXXXXXXXX" class="btn-nav-wa" target="_blank" rel="noopener">📱 WhatsApp</a>
+                <a href="contact.html#appointment" class="btn-nav-book">📅 Book Now</a>
+            </div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-close-btn">✕</button>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="technology.html">Technology</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html#appointment" class="mobile-btn">📅 Book Appointment</a>
+    </div>
+
+    <!-- Inner Page Hero -->
+    <div class="page-hero">
+        <div class="page-hero-content">
+            <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> Services</div>
+            <h1>Our Dental Services</h1>
+            <p>Comprehensive, advanced dental treatments delivered with precision and care — all under one roof in
+                Kerala.</p>
+        </div>
+    </div>
+
+    <!-- Quick Navigation Bar -->
+    <div
+        style="background:var(--cream); padding:1.5rem 2rem; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:100;">
+        <div
+            style="max-width:1280px; margin:0 auto; display:flex; gap:0.5rem; overflow-x:auto; padding-bottom:0.25rem;">
+            <a href="#laser"
+                style="white-space:nowrap; font-size:0.8rem; font-weight:500; color:var(--text-secondary); padding:0.4rem 0.9rem; border:1px solid var(--border); border-radius:50px; transition:var(--transition);"
+                onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-secondary)'">⚡
+                Laser</a>
+            <a href="#implants"
+                style="white-space:nowrap; font-size:0.8rem; font-weight:500; color:var(--text-secondary); padding:0.4rem 0.9rem; border:1px solid var(--border); border-radius:50px; transition:var(--transition);"
+                onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-secondary)'">🔩
+                Implants</a>
+            <a href="#cosmetic"
+                style="white-space:nowrap; font-size:0.8rem; font-weight:500; color:var(--text-secondary); padding:0.4rem 0.9rem; border:1px solid var(--border); border-radius:50px; transition:var(--transition);"
+                onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-secondary)'">✨
+                Cosmetic</a>
+            <a href="#rct"
+                style="white-space:nowrap; font-size:0.8rem; font-weight:500; color:var(--text-secondary); padding:0.4rem 0.9rem; border:1px solid var(--border); border-radius:50px; transition:var(--transition);"
+                onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-secondary)'">🦷 Root
+                Canal</a>
+            <a href="#whitening"
+                style="white-space:nowrap; font-size:0.8rem; font-weight:500; color:var(--text-secondary); padding:0.4rem 0.9rem; border:1px solid var(--border); border-radius:50px; transition:var(--transition);"
+                onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-secondary)'">💎
+                Whitening</a>
+            <a href="#pediatric"
+                style="white-space:nowrap; font-size:0.8rem; font-weight:500; color:var(--text-secondary); padding:0.4rem 0.9rem; border:1px solid var(--border); border-radius:50px; transition:var(--transition);"
+                onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-secondary)'">🧸
+                Pediatric</a>
+            <a href="#gum"
+                style="white-space:nowrap; font-size:0.8rem; font-weight:500; color:var(--text-secondary); padding:0.4rem 0.9rem; border:1px solid var(--border); border-radius:50px; transition:var(--transition);"
+                onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-secondary)'">🩸 Gum
+                Care</a>
+            <a href="#crowns"
+                style="white-space:nowrap; font-size:0.8rem; font-weight:500; color:var(--text-secondary); padding:0.4rem 0.9rem; border:1px solid var(--border); border-radius:50px; transition:var(--transition);"
+                onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-secondary)'">👑
+                Crowns</a>
+            <a href="#smile"
+                style="white-space:nowrap; font-size:0.8rem; font-weight:500; color:var(--text-secondary); padding:0.4rem 0.9rem; border:1px solid var(--border); border-radius:50px; transition:var(--transition);"
+                onmouseover="this.style.borderColor='var(--gold)'; this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text-secondary)'">😁 Smile
+                Design</a>
+        </div>
+    </div>
+
+    <!-- Services List -->
+    <section class="section" aria-label="Detailed Dental Services">
+        <div class="container">
+
+            <div id="laser" class="service-detail-card animate-on-scroll">
+                <div class="service-detail-img">⚡</div>
+                <div class="service-detail-body">
+                    <div class="service-detail-tag">Advanced Treatment</div>
+                    <h2 class="service-detail-title">Laser Dentistry</h2>
+                    <p class="service-detail-desc">Our advanced dental laser system enables a new era of dental
+                        treatment — minimally invasive, virtually pain-free, and with dramatically faster healing. Laser
+                        dentistry replaces the drill in many procedures.</p>
+                    <div class="service-detail-benefits">
+                        <div class="benefit-item">Minimal or no anesthesia required in most cases</div>
+                        <div class="benefit-item">Faster tissue healing and recovery</div>
+                        <div class="benefit-item">Reduced risk of bacterial infection</div>
+                        <div class="benefit-item">Precise cutting without damaging surrounding tissue</div>
+                        <div class="benefit-item">Ideal for gum treatment, teeth whitening, and minor surgeries</div>
+                    </div>
+                    <a href="contact.html#appointment" class="btn-primary"
+                        style="display:inline-flex; margin-top:0.5rem;">Book Laser Consultation <span>→</span></a>
+                </div>
+            </div>
+
+            <div id="implants" class="service-detail-card reverse animate-on-scroll">
+                <div class="service-detail-img">🔩</div>
+                <div class="service-detail-body">
+                    <div class="service-detail-tag">Permanent Restoration</div>
+                    <h2 class="service-detail-title">Dental Implants</h2>
+                    <p class="service-detail-desc">Dental implants are the gold standard for tooth replacement —
+                        titanium roots fused to your jawbone, topped with a natural-looking crown. They look, feel, and
+                        function exactly like your own teeth.</p>
+                    <div class="service-detail-benefits">
+                        <div class="benefit-item">Permanent, long-lasting solution (20+ years)</div>
+                        <div class="benefit-item">Prevents bone loss after tooth extraction</div>
+                        <div class="benefit-item">No impact on adjacent teeth</div>
+                        <div class="benefit-item">Natural appearance and bite function</div>
+                        <div class="benefit-item">Popular with NRI patients visiting Kerala</div>
+                    </div>
+                    <a href="contact.html#appointment" class="btn-primary"
+                        style="display:inline-flex; margin-top:0.5rem;">Book Implant Consultation <span>→</span></a>
+                </div>
+            </div>
+
+            <div id="rct" class="service-detail-card animate-on-scroll">
+                <div class="service-detail-img">🦷</div>
+                <div class="service-detail-body">
+                    <div class="service-detail-tag">Save Your Natural Tooth</div>
+                    <h2 class="service-detail-title">Root Canal Treatment</h2>
+                    <p class="service-detail-desc">Modern root canal therapy is nothing like its fearsome reputation.
+                        Using advanced instruments and proper pain management, we make RCT a comfortable, life-saving
+                        procedure for your natural tooth.</p>
+                    <div class="service-detail-benefits">
+                        <div class="benefit-item">Relieves severe toothache and infection</div>
+                        <div class="benefit-item">Saves your natural tooth from extraction</div>
+                        <div class="benefit-item">Single or multi-visit treatment options</div>
+                        <div class="benefit-item">Rotary endodontic instruments for precision</div>
+                        <div class="benefit-item">Followed by crown placement for full restoration</div>
+                    </div>
+                    <a href="contact.html#appointment" class="btn-primary"
+                        style="display:inline-flex; margin-top:0.5rem;">Book RCT Consultation <span>→</span></a>
+                </div>
+            </div>
+
+            <div id="cosmetic" class="service-detail-card reverse animate-on-scroll">
+                <div class="service-detail-img">✨</div>
+                <div class="service-detail-body">
+                    <div class="service-detail-tag">Transform Your Smile</div>
+                    <h2 class="service-detail-title">Cosmetic Dentistry</h2>
+                    <p class="service-detail-desc">Your smile is your signature. Our cosmetic dentistry services combine
+                        artistry with dental science to create stunning smiles — using veneers, bonding, contouring, and
+                        full smile makeovers.</p>
+                    <div class="service-detail-benefits">
+                        <div class="benefit-item">Porcelain and composite veneers</div>
+                        <div class="benefit-item">Tooth bonding and reshaping</div>
+                        <div class="benefit-item">Smile makeover planning with digital preview</div>
+                        <div class="benefit-item">Full mouth rehabilitation for complex cases</div>
+                        <div class="benefit-item">Natural-looking, personalized results</div>
+                    </div>
+                    <a href="contact.html#appointment" class="btn-primary"
+                        style="display:inline-flex; margin-top:0.5rem;">Book Smile Consultation <span>→</span></a>
+                </div>
+            </div>
+
+            <div id="whitening" class="service-detail-card animate-on-scroll">
+                <div class="service-detail-img">💎</div>
+                <div class="service-detail-body">
+                    <div class="service-detail-tag">Brighten Your Smile</div>
+                    <h2 class="service-detail-title">Teeth Whitening</h2>
+                    <p class="service-detail-desc">Professional in-clinic teeth whitening delivers dramatically whiter
+                        teeth — up to 8 shades brighter — in a single appointment. Safer and more effective than
+                        over-the-counter products.</p>
+                    <div class="service-detail-benefits">
+                        <div class="benefit-item">Results visible in a single session</div>
+                        <div class="benefit-item">Up to 8 shades brighter naturally</div>
+                        <div class="benefit-item">Laser-assisted whitening for enhanced results</div>
+                        <div class="benefit-item">Sensitivity-managed protocol</div>
+                        <div class="benefit-item">Custom take-home maintenance kit included</div>
+                    </div>
+                    <a href="contact.html#appointment" class="btn-primary"
+                        style="display:inline-flex; margin-top:0.5rem;">Book Whitening Session <span>→</span></a>
+                </div>
+            </div>
+
+            <div id="pediatric" class="service-detail-card reverse animate-on-scroll">
+                <div class="service-detail-img">🧸</div>
+                <div class="service-detail-body">
+                    <div class="service-detail-tag">Child-Friendly Care</div>
+                    <h2 class="service-detail-title">Pediatric Dentistry</h2>
+                    <p class="service-detail-desc">Creating a positive dental experience for children is our mission.
+                        Our pediatric team uses gentle techniques, child-friendly explanations, and a calm environment
+                        to build trust and healthy habits early.</p>
+                    <div class="service-detail-benefits">
+                        <div class="benefit-item">Early dental assessment from age 2+</div>
+                        <div class="benefit-item">Preventive sealants and fluoride treatments</div>
+                        <div class="benefit-item">Cavity filling with minimal discomfort</div>
+                        <div class="benefit-item">Early orthodontic screening</div>
+                        <div class="benefit-item">Child-friendly clinic environment and approach</div>
+                    </div>
+                    <a href="contact.html#appointment" class="btn-primary"
+                        style="display:inline-flex; margin-top:0.5rem;">Book Pediatric Visit <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- More Services Grid -->
+            <div style="margin-top:3rem;">
+                <h2 style="font-family:var(--font-serif); font-size:2rem; color:var(--navy); text-align:center; margin-bottom:2rem;"
+                    class="animate-on-scroll">More Dental Treatments</h2>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll" id="gum">
+                        <div class="service-icon">🩸</div>
+                        <div class="service-name">Gum Treatment</div>
+                        <p class="service-desc">Scaling, root planing, and laser gum therapy for gingivitis and
+                            periodontitis — protecting your foundation.</p>
+                        <a href="contact.html#appointment" class="service-link">Book Consultation →</a>
+                    </div>
+                    <div class="service-card animate-on-scroll" id="crowns">
+                        <div class="service-icon">👑</div>
+                        <div class="service-name">Crowns & Bridges</div>
+                        <p class="service-desc">High-strength zirconia and ceramic restorations that restore function
+                            and match your natural tooth shade perfectly.</p>
+                        <a href="contact.html#appointment" class="service-link">Book Consultation →</a>
+                    </div>
+                    <div class="service-card animate-on-scroll" id="smile">
+                        <div class="service-icon">😁</div>
+                        <div class="service-name">Smile Design</div>
+                        <p class="service-desc">A comprehensive, multi-disciplinary approach to creating the perfect
+                            smile tailored to your face and personality.</p>
+                        <a href="contact.html#appointment" class="service-link">Book Consultation →</a>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">🦷</div>
+                        <div class="service-name">Dentures</div>
+                        <p class="service-desc">Full and partial denture solutions that restore your smile, facial
+                            aesthetics, and chewing function comfortably.</p>
+                        <a href="contact.html#appointment" class="service-link">Book Consultation →</a>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">⚕️</div>
+                        <div class="service-name">Tooth Extraction</div>
+                        <p class="service-desc">Gentle single and surgical extractions, including wisdom tooth removal,
+                            with proper aftercare protocols.</p>
+                        <a href="contact.html#appointment" class="service-link">Book Consultation →</a>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">🔍</div>
+                        <div class="service-name">Checkup & Cleaning</div>
+                        <p class="service-desc">Comprehensive oral examination, professional scaling, and polishing to
+                            maintain optimal dental health.</p>
+                        <a href="contact.html#appointment" class="service-link">Book Consultation →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section
+        style="background:linear-gradient(135deg,var(--gold),var(--teal-dark)); padding:4rem 2rem; text-align:center;">
+        <h2 style="font-family:var(--font-serif); font-size:2.5rem; color:white; margin-bottom:1rem;"
+            class="animate-on-scroll">Book Your Consultation Today</h2>
+        <p style="color:rgba(255,255,255,0.85); margin-bottom:2rem;" class="animate-on-scroll">Not sure which treatment
+            you need? Our experts will guide you with an honest assessment.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;" class="animate-on-scroll">
+            <a href="contact.html#appointment" class="btn-secondary"
+                style="color:white; border-color:rgba(255,255,255,0.6);">📅 Book Appointment</a>
+            <a href="https://wa.me/91XXXXXXXXXX" class="btn-secondary"
+                style="color:white; border-color:rgba(255,255,255,0.6); background:#25D366;" target="_blank"
+                rel="noopener">📱 WhatsApp Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-logo">
+                    <div class="footer-brand-logo-icon">🦷</div>
+                    <h3>Royal Dental Lounge</h3>
+                </div>
+                <p>Excellence in Modern Dentistry. MLG Square, NH66, Kerala.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">📍 MLG Square, NH66</a></li>
+                    <li><a href="tel:+91XXXXXXXXXX">📞 +91 XXXXXXXXXX</a></li>
+                    <li><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">📱 WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <ul>
+                    <li><a href="#">🕒 Daily: 8:30 AM – 8:30 PM</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2025 <span class="gold">Royal Dental Lounge</span>. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <a href="https://wa.me/91XXXXXXXXXX" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">📱</a>
+
+    <!-- Global JS -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
