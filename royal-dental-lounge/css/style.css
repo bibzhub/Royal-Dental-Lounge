@@ -75,8 +75,7 @@ ul {
    NAVIGATION
    ============================================================ */
 .nav {
-  position: fixed;
-  top: 0;
+  position: absolute;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -94,6 +93,8 @@ ul {
 }
 
 .nav.scrolled {
+  position: fixed;
+  top: 0;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px);
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.08);
