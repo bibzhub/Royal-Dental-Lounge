@@ -1592,6 +1592,50 @@ svg.icon {
   .float-wa {
     bottom: 5.5rem;
   }
+
+  /* Force services and why-choose grids to 1-column */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  /* Service card auto-height on mobile */
+  .service-card {
+    height: auto;
+  }
+
+  /* Doctor section single column */
+  .doctor-section {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+
+  /* Trust bar vertical on mobile */
+  .trust-bar-inner {
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* Hours strip: tighter, wrap on very small screens */
+  .hours-strip {
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+    gap: 0.75rem !important;
+    flex-wrap: wrap;
+  }
+
+  /* Full-width buttons on mobile */
+  .btn-primary,
+  .btn-secondary,
+  .btn-whatsapp {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Mobile Menu */
