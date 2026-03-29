@@ -7,30 +7,30 @@
 
 /* 🎨 CSS Variables */
 :root {
-  --gold: #C9A84C;
-  --gold-light: #E8C96A;
-  --gold-dark: #A07830;
-  --teal: #2A9D8F;
-  --teal-light: #4DBDB2;
-  --teal-dark: #1A7A6E;
-  --navy: #0A1628;
-  --navy-mid: #112240;
+  --gold: #D4AF37;
+  --gold-light: #F3E5AB;
+  --gold-dark: #B8860B;
+  --teal: #1C3144; /* Changed teal to a deeper accent blue to match royal theme */
+  --teal-light: #2D4C6B;
+  --teal-dark: #0D1A25;
+  --navy: #0B192C; /* Deep royal blue navy */
+  --navy-mid: #142845;
   --slate: #1E2D45;
   --white: #FFFFFF;
-  --off-white: #F8F7F4;
-  --cream: #FAF8F3;
+  --off-white: #FAF9F6;
+  --cream: #FDFBF7;
   --text-primary: #1A1A2E;
   --text-secondary: #4A5568;
   --text-muted: #718096;
-  --border: rgba(201, 168, 76, 0.2);
-  --shadow-gold: 0 4px 30px rgba(201, 168, 76, 0.15);
-  --shadow-card: 0 8px 40px rgba(0, 0, 0, 0.08);
-  --shadow-hero: 0 20px 80px rgba(0, 0, 0, 0.3);
+  --border: rgba(212, 175, 55, 0.2);
+  --shadow-gold: 0 8px 30px rgba(212, 175, 55, 0.2);
+  --shadow-card: 0 10px 40px rgba(11, 25, 44, 0.05);
+  --shadow-hero: 0 20px 80px rgba(0, 0, 0, 0.4);
   --radius: 12px;
   --radius-lg: 20px;
   --radius-xl: 32px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -481,11 +481,22 @@ ul {
    SECTION COMMONS
    ============================================================ */
 .section {
-  padding: 6rem 2rem;
+  padding: 8rem 2rem;
 }
 
 .section-alt {
   background: var(--cream);
+}
+
+.section-dark {
+  background: var(--navy);
+  color: white;
+}
+
+svg.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
 .section-dark {
@@ -598,21 +609,24 @@ ul {
    ============================================================ */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
 }
 
 .service-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
   cursor: pointer;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .service-card::before {
@@ -673,8 +687,9 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  margin-top: 1rem;
-  font-size: 0.82rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--gold);
   transition: var(--transition);
@@ -832,9 +847,9 @@ ul {
    ============================================================ */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 4rem;
 }
 
 .why-card {
@@ -1624,4 +1639,62 @@ ul {
   border-radius: 50px;
   font-size: 1rem !important;
   font-family: var(--font-sans) !important;
+}
+
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-item[open] {
+  box-shadow: var(--shadow-card);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.faq-question {
+  padding: 1.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  list-style: none; /* Hide default arrow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--gold);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
